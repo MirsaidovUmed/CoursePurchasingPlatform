@@ -1,28 +1,28 @@
 package mock
 
 import (
-	pkg "Udemy/pkg/database"
+	"Udemy/pkg"
 	"Udemy/pkg/models"
 )
 
-func FillCity() {
-	pkg.City = append(pkg.City, models.City{
+func FillCities() {
+	pkg.Cities = append(pkg.Cities, models.City{
 		Name:   "Душанбе",
-		Region: pkg.Region[0],
+		Region: pkg.Regions[2],
 	})
 
-	pkg.City = append(pkg.City, models.City{
+	pkg.Cities = append(pkg.Cities, models.City{
 		Name:   "Худжанд",
-		Region: pkg.Region[1],
+		Region: pkg.Regions[1],
 	})
 
-	pkg.City = append(pkg.City, models.City{
-		Name:   "Истаравшан",
-		Region: pkg.Region[1],
-	})
-
-	pkg.City = append(pkg.City, models.City{
+	pkg.Cities = append(pkg.Cities, models.City{
 		Name:   "Куляб",
-		Region: pkg.Region[2],
+		Region: pkg.Regions[0],
+	})
+
+	pkg.Cities = append(pkg.Cities, models.City{
+		Name:   "Хорог",
+		Region: pkg.Regions[3],
 	})
 }

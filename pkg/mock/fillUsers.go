@@ -1,38 +1,28 @@
 package mock
 
 import (
-	pkg "Udemy/pkg/database"
+	"Udemy/pkg"
 	"Udemy/pkg/models"
 )
 
 func FillUsers() {
-	pkg.User = append(pkg.User, models.User{
-		Name:      "Oskar",
+	pkg.Users = append(pkg.Users, models.User{
+		Name:      "Jacob Akhmedov",
 		BirthYear: 2004,
-		Balance:   100000,
-		City:      pkg.City[0],
-		Address:   "someAddress",
-		Mail:      "someMail.com",
-		Phone:     "+992565656",
+		Balance:   1000,
+		City:      pkg.Cities[1],
+		Address:   "улица хз, дом хз, квартира хз",
+		Mail:      "jacob@akhmedov.tech",
+		Phone:     "928560139",
 	})
 
-	pkg.User = append(pkg.User, models.User{
-		Name:      "someName",
-		BirthYear: 1999,
-		Balance:   100000,
-		City:      pkg.City[2],
-		Address:   "someOtherAddress",
-		Mail:      "someMail.com",
-		Phone:     "+992565656",
-	})
-
-	pkg.User = append(pkg.User, models.User{
-		Name:      "someOtherName",
-		BirthYear: 2004,
-		Balance:   100000,
-		City:      pkg.City[3],
-		Address:   "someOtherOtherAddress",
-		Mail:      "someMail.com",
-		Phone:     "+992565656",
+	pkg.Users = append(pkg.Users, models.User{
+		Name:      "Maksim Gorkiy",
+		BirthYear: 1868,
+		Balance:   2500,
+		City:      pkg.Cities[3],
+		Address:   "улица Максима Горького, дом 3, квартира 27",
+		Mail:      "maksim@gorkiy.tech",
+		Phone:     "889300475",
 	})
 }

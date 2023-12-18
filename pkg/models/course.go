@@ -2,7 +2,7 @@ package models
 
 type Course struct {
 	Name     string
-	Price    int
+	Price    float64
 	Category Category
-	Duration string
+	Duration int64
 }

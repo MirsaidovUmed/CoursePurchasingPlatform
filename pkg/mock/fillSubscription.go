@@ -1,21 +1,32 @@
 package mock
 
 import (
-	pkg "Udemy/pkg/database"
+	"Udemy/pkg"
 	"Udemy/pkg/models"
 )
 
 func FillSubscriptions() {
-	for i := range pkg.User {
-		if i < len(pkg.Courses) {
-			pkg.User[i].Balance -= pkg.Courses[i].Price
+	pkg.Subscriptions = append(pkg.Subscriptions, models.Subscription{
+		User:   pkg.Users[1],
+		Course: pkg.Courses[0],
+		Price:  pkg.Courses[0].Price,
+	})
 
-			subscription := models.Subscription{
-				User:   pkg.User[i],
-				Course: pkg.Courses[i],
-				Price:  pkg.Courses[i].Price,
-			}
-			pkg.Subscription = append(pkg.Subscription, subscription)
-		}
-	}
+	pkg.Subscriptions = append(pkg.Subscriptions, models.Subscription{
+		User:   pkg.Users[0],
+		Course: pkg.Courses[1],
+		Price:  pkg.Courses[1].Price,
+	})
+
+	pkg.Subscriptions = append(pkg.Subscriptions, models.Subscription{
+		User:   pkg.Users[0],
+		Course: pkg.Courses[3],
+		Price:  pkg.Courses[3].Price,
+	})
+
+	pkg.Subscriptions = append(pkg.Subscriptions, models.Subscription{
+		User:   pkg.Users[1],
+		Course: pkg.Courses[2],
+		Price:  pkg.Courses[2].Price,
+	})
 }

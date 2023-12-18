@@ -3,7 +3,7 @@ package models
 type User struct {
 	Name      string
 	BirthYear int
-	Balance   int
+	Balance   float64
 	City      City
 	Address   string
 	Mail      string

@@ -1,16 +1,24 @@
 package mock
 
 import (
-	pkg "Udemy/pkg/database"
+	"Udemy/pkg"
 	"Udemy/pkg/models"
 )
 
-func FillCategory() {
-	pkg.Category = append(pkg.Category, models.Category{
-		Name: "Language",
+func FillCategories() {
+	pkg.Categories = append(pkg.Categories, models.Category{
+		Name: "IT",
 	})
 
-	pkg.Category = append(pkg.Category, models.Category{
-		Name: "IT",
+	pkg.Categories = append(pkg.Categories, models.Category{
+		Name: "Cooking",
+	})
+
+	pkg.Categories = append(pkg.Categories, models.Category{
+		Name: "Design",
+	})
+
+	pkg.Categories = append(pkg.Categories, models.Category{
+		Name: "Marketing",
 	})
 }
